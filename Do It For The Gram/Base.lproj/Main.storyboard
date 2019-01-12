@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bUg-rl-ua8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aQD-cf-K3a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,6 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="86" y="-9"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="Q7c-xM-plG">
@@ -37,7 +38,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BA2-wc-Cfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1108" y="110"/>
+            <point key="canvasLocation" x="948" y="-9"/>
+        </scene>
+        <!--Alerts View Controller-->
+        <scene sceneID="ece-Qk-PkY">
+            <objects>
+                <viewController id="aQD-cf-K3a" customClass="AlertsViewController" customModule="Do_It_For_The_Gram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fd7-Hi-l0c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThF-9T-dzL">
+                                <rect key="frame" x="100" y="448" width="175" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlert:" destination="aQD-cf-K3a" eventType="touchUpInside" id="PI0-Yb-DQ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-99-aUp">
+                                <rect key="frame" x="100" y="546" width="175" height="30"/>
+                                <state key="normal" title="Pause App"/>
+                                <connections>
+                                    <action selector="pauseApp:" destination="aQD-cf-K3a" eventType="touchUpInside" id="zns-xd-CyV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yPh-99-aUp" firstAttribute="top" secondItem="ThF-9T-dzL" secondAttribute="bottom" constant="68" id="1M5-Q5-dP9"/>
+                            <constraint firstItem="ThF-9T-dzL" firstAttribute="leading" secondItem="pQb-zF-1yS" secondAttribute="leading" constant="100" id="2fL-eu-3LN"/>
+                            <constraint firstItem="yPh-99-aUp" firstAttribute="centerX" secondItem="Fd7-Hi-l0c" secondAttribute="centerX" id="5G1-Vr-HmH"/>
+                            <constraint firstItem="pQb-zF-1yS" firstAttribute="trailing" secondItem="yPh-99-aUp" secondAttribute="trailing" constant="100" id="7Ie-w2-qWf"/>
+                            <constraint firstItem="pQb-zF-1yS" firstAttribute="bottom" secondItem="yPh-99-aUp" secondAttribute="bottom" constant="91" id="7eR-vR-IwU"/>
+                            <constraint firstItem="yPh-99-aUp" firstAttribute="leading" secondItem="pQb-zF-1yS" secondAttribute="leading" constant="100" id="IuN-jq-zyf"/>
+                            <constraint firstItem="ThF-9T-dzL" firstAttribute="centerX" secondItem="Fd7-Hi-l0c" secondAttribute="centerX" id="c7r-sP-0m1"/>
+                            <constraint firstItem="pQb-zF-1yS" firstAttribute="trailing" secondItem="ThF-9T-dzL" secondAttribute="trailing" constant="100" id="gcX-Kc-a0b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pQb-zF-1yS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqi-KF-nhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="699"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,7 @@
 		8C0C649F21E97271005F2E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C0C649E21E97271005F2E2A /* Assets.xcassets */; };
 		8C0C64A221E97271005F2E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0C64A021E97271005F2E2A /* LaunchScreen.storyboard */; };
 		8CC41E6C21E99AF800885BD1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E6B21E99AF800885BD1 /* PhotoViewController.swift */; };
+		8CC41E6E21E9A56600885BD1 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8C0C64A121E97271005F2E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C0C64A321E97271005F2E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CC41E6B21E99AF800885BD1 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		998CADD35ED7FA174907109E /* Pods-Do It For The Gram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Do It For The Gram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram.release.xcconfig"; sourceTree = "<group>"; };
 		CF2C358A39F57E64B9D5686C /* Pods_Do_It_For_The_Gram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Do_It_For_The_Gram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC3CF9E0BF819A72CB52FAE /* Pods-Do It For The Gram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Do It For The Gram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				8C0C649721E97270005F2E2A /* AppDelegate.swift */,
 				8C0C649921E97270005F2E2A /* ViewController.swift */,
 				8CC41E6B21E99AF800885BD1 /* PhotoViewController.swift */,
+				8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */,
 				8C0C649B21E97270005F2E2A /* Main.storyboard */,
 				8C0C649E21E97271005F2E2A /* Assets.xcassets */,
 				8C0C64A021E97271005F2E2A /* LaunchScreen.storyboard */,
@@ -212,6 +215,7 @@
 				8C0C649A21E97270005F2E2A /* ViewController.swift in Sources */,
 				8C0C649821E97270005F2E2A /* AppDelegate.swift in Sources */,
 				8CC41E6C21E99AF800885BD1 /* PhotoViewController.swift in Sources */,
+				8CC41E6E21E9A56600885BD1 /* AlertsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
