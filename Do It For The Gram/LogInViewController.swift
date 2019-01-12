@@ -10,45 +10,34 @@ import UIKit
 import Parse
 
 class LogInViewController: UIViewController {
-
+    
+    //MARK:- IBOutlets
+    @IBOutlet weak var loginEmailTextField: UITextField!
+    @IBOutlet weak var loginPasswordTextField: UITextField!
+    
+    //MARK:- Properties
+    var userIsLoggedIn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createTestCommentForParse()
+        
     }
 
-    //create a retrieve a tweet
-    private func createTestCommentForParse() {
-        
-        //PFObjects use classNames for grouping comment elements
-        let comment = PFObject(className: "Comment")
-        
-        comment["text"] = "I love this photo so much!"
-        //saveEventually can hold off on saving if internet connectivity is not available at time of save
-        comment.saveInBackground { (success, error) in
-            if success {
-               print("save successful")
-            } else {
-                print("save failed")
-            }
-        }
-        
-        retrieveCommentsForUser()
+
+    //MARK:- Login/signup actions
+    @IBAction func recoverPasswordButtonTapped(_ sender: UIButton) {
+    }
+
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
     }
     
-    private func retrieveCommentsForUser() {
-        let query = PFQuery(className: "Comment")
-        
-        query.getObjectInBackground(withId: "A5BWZHBee1") { (object, error) in
-            if let comment = object {
-                //if we're here, we've got a comment
-                if let text = comment["text"] {
-                    print(text as? String ?? "")
-                }
-            }
-        }
+    @IBAction func facebookLoginButtonTapped(_ sender: UIButton) {
     }
-
+    
+    @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "toSignUpVC", sender: nil)
+    }
+    
 }
 

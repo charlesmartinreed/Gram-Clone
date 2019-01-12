@@ -9,6 +9,11 @@
 import UIKit
 
 class AlertsViewController: UIViewController {
+    
+    //MARK:- IBOutlets
+    @IBOutlet weak var loginEmailTextField: UITextField!
+    @IBOutlet weak var loginPasswordTextField: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
