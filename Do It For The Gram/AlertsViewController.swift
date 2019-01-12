@@ -37,7 +37,6 @@ class AlertsViewController: UIViewController {
     }
     
     @IBAction func pauseApp(_ sender: UIButton) {
-        //using activity indicators
         let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         activityIndicator.center = self.view.center //at the center of screen
         activityIndicator.hidesWhenStopped = true
