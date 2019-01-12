@@ -17,6 +17,9 @@
 		8CC41E6E21E9A56600885BD1 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */; };
 		8CC41E7021E9ABCA00885BD1 /* Sail-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CC41E6F21E9ABCA00885BD1 /* Sail-Regular.otf */; };
 		8CC41E7221E9C9AE00885BD1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E7121E9C9AE00885BD1 /* SignUpViewController.swift */; };
+		8CC41E7421E9D22400885BD1 /* SignUpViewSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E7321E9D22400885BD1 /* SignUpViewSecondViewController.swift */; };
+		8CC41E7621E9D8D600885BD1 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E7521E9D8D600885BD1 /* CreatePasswordViewController.swift */; };
+		8CC41E7821E9D9D800885BD1 /* NewUserWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E7721E9D9D800885BD1 /* NewUserWelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		8CC41E6F21E9ABCA00885BD1 /* Sail-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sail-Regular.otf"; sourceTree = "<group>"; };
 		8CC41E7121E9C9AE00885BD1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8CC41E7321E9D22400885BD1 /* SignUpViewSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewSecondViewController.swift; sourceTree = "<group>"; };
+		8CC41E7521E9D8D600885BD1 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
+		8CC41E7721E9D9D800885BD1 /* NewUserWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserWelcomeViewController.swift; sourceTree = "<group>"; };
 		998CADD35ED7FA174907109E /* Pods-Do It For The Gram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Do It For The Gram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram.release.xcconfig"; sourceTree = "<group>"; };
 		CF2C358A39F57E64B9D5686C /* Pods_Do_It_For_The_Gram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Do_It_For_The_Gram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC3CF9E0BF819A72CB52FAE /* Pods-Do It For The Gram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Do It For The Gram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +78,9 @@
 				8C0C649721E97270005F2E2A /* AppDelegate.swift */,
 				8C0C649921E97270005F2E2A /* LogInViewController.swift */,
 				8CC41E7121E9C9AE00885BD1 /* SignUpViewController.swift */,
+				8CC41E7321E9D22400885BD1 /* SignUpViewSecondViewController.swift */,
+				8CC41E7521E9D8D600885BD1 /* CreatePasswordViewController.swift */,
+				8CC41E7721E9D9D800885BD1 /* NewUserWelcomeViewController.swift */,
 				8CC41E6B21E99AF800885BD1 /* PhotoViewController.swift */,
 				8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */,
 				8C0C649B21E97270005F2E2A /* Main.storyboard */,
@@ -224,6 +233,9 @@
 				8CC41E6C21E99AF800885BD1 /* PhotoViewController.swift in Sources */,
 				8CC41E6E21E9A56600885BD1 /* AlertsViewController.swift in Sources */,
 				8CC41E7221E9C9AE00885BD1 /* SignUpViewController.swift in Sources */,
+				8CC41E7821E9D9D800885BD1 /* NewUserWelcomeViewController.swift in Sources */,
+				8CC41E7621E9D8D600885BD1 /* CreatePasswordViewController.swift in Sources */,
+				8CC41E7421E9D22400885BD1 /* SignUpViewSecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

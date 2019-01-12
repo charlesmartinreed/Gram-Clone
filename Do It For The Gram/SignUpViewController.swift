@@ -35,8 +35,14 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func signInButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func returnToSignInScreen(_ sender: UIButton) {
+        //self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAddNameVC", sender: nil)
     }
     
 
