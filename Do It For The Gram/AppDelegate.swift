@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //MARK:- Parse config and init
+        
+//        let parseConfiguration = ParseClientConfiguration {
+//            $0.applicationId = "$2y$12$HkUv9gAtnxZabpz02Qbp..8lXHSF0tDGCIDztE1k5fTHcmqW6t2Vu"
+//            $0.clientKey = "parseClientKey"
+//            $0.server = "parseServerURLString"
+//        }
+        
+        Parse.initialize(with: ParseClientConfiguration(block: { (configuration) in
+            configuration.server = "https://do-it-for-the-gram.herokuapp.com/parse"
+            configuration.applicationId = "$2y$12$HkUv9gAtnxZabpz02Qbp..8lXHSF0tDGCIDztE1k5fTHcmqW6t2Vu"
+            configuration.clientKey = nil
+        }))
+        
+        //Parse.initialize(with: parseConfiguration)
+        
         return true
     }
 

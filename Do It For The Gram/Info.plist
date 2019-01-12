@@ -41,5 +41,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>do-it-for-the-gram.herokuapp.com/parse/</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

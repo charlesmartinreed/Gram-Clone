@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0DE8EAE73332C604221D25 /* Pods_Do_It_For_The_Gram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2C358A39F57E64B9D5686C /* Pods_Do_It_For_The_Gram.framework */; };
 		8C0C649821E97270005F2E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C649721E97270005F2E2A /* AppDelegate.swift */; };
 		8C0C649A21E97270005F2E2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C649921E97270005F2E2A /* ViewController.swift */; };
 		8C0C649D21E97270005F2E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0C649B21E97270005F2E2A /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		8C0C649E21E97271005F2E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C0C64A121E97271005F2E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C0C64A321E97271005F2E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		998CADD35ED7FA174907109E /* Pods-Do It For The Gram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Do It For The Gram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram.release.xcconfig"; sourceTree = "<group>"; };
+		CF2C358A39F57E64B9D5686C /* Pods_Do_It_For_The_Gram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Do_It_For_The_Gram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC3CF9E0BF819A72CB52FAE /* Pods-Do It For The Gram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Do It For The Gram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0DE8EAE73332C604221D25 /* Pods_Do_It_For_The_Gram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				8C0C649621E97270005F2E2A /* Do It For The Gram */,
 				8C0C649521E97270005F2E2A /* Products */,
+				E15B8F9955A6194A79833CC7 /* Pods */,
+				B2448DDD5635BBBBC8EACD43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "Do It For The Gram";
 			sourceTree = "<group>";
 		};
+		B2448DDD5635BBBBC8EACD43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF2C358A39F57E64B9D5686C /* Pods_Do_It_For_The_Gram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E15B8F9955A6194A79833CC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCC3CF9E0BF819A72CB52FAE /* Pods-Do It For The Gram.debug.xcconfig */,
+				998CADD35ED7FA174907109E /* Pods-Do It For The Gram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C0C64A621E97271005F2E2A /* Build configuration list for PBXNativeTarget "Do It For The Gram" */;
 			buildPhases = (
+				3C44BDF3167D43D2ECC02675 /* [CP] Check Pods Manifest.lock */,
 				8C0C649021E97270005F2E2A /* Sources */,
 				8C0C649121E97270005F2E2A /* Frameworks */,
 				8C0C649221E97270005F2E2A /* Resources */,
+				9500CA55D45961E8ACA39087 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C44BDF3167D43D2ECC02675 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Do It For The Gram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9500CA55D45961E8ACA39087 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C0C649021E97270005F2E2A /* Sources */ = {
@@ -280,6 +351,7 @@
 		};
 		8C0C64A721E97271005F2E2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCC3CF9E0BF819A72CB52FAE /* Pods-Do It For The Gram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +369,7 @@
 		};
 		8C0C64A821E97271005F2E2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998CADD35ED7FA174907109E /* Pods-Do It For The Gram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
