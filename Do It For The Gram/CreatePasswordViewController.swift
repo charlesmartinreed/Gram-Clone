@@ -7,20 +7,56 @@
 //
 
 import UIKit
+import Parse
 
 class CreatePasswordViewController: UIViewController {
 
+    //MARK:- IBOutlets
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    //MARK:- Properties
+    var user: PFUser?
+    var signUpWasSuccessful = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
     //MARK:- IBActions
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+ 
+
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
         //assuming the password meets the requirements, pass the user to the success screen
-        performSegue(withIdentifier: "toNewUserWelcomeVC", sender: nil)
+        guard let password = passwordTextField.text else { return }
+        
+        if password != "" {
+            user?.password = password
+            user?.signUpInBackground { (success, error) in
+                if let error = error {
+                    //display an alert
+                    print(error.localizedDescription)
+                } else {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "toNewUserWelcomeVC", sender: nil)
+                        print("successful creation of new user!")
+                    }
+                }
+            }
+        } else {
+            //display an alert
+            print("could not create password")
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toNewUserWelcomeVC" {
+                if let destinationVC = segue.destination as? NewUserWelcomeViewController {
+                    destinationVC.user = user
+                }
+            }
     }
     
     @IBAction func returnToSignInScreen(_ sender: UIButton) {

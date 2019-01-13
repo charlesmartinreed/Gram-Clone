@@ -7,23 +7,45 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewSecondViewController: UIViewController {
 
     //MARK:- IBOutlets
     @IBOutlet weak var fullNameTextField: UITextField!
     
+    //MARK:- Properties
+    var user: PFUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
 
     //MARK:- IBActions
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
+
+    @IBAction func nextButtonTapped(_ sender: Any) {
         //continue to the Create a Password screen
-        performSegue(withIdentifier: "toCreatePasswordVC", sender: nil)
+        guard let fullName = fullNameTextField.text else { return }
+        
+        if fullName != "" {
+            user?.username = fullName
+            performSegue(withIdentifier: "toCreatePasswordVC", sender: nil)
+            
+        } else {
+            //error handling, this will be an alert
+            print("Could not create username")
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toCreatePasswordVC" {
+                if let destinationVC = segue.destination as? CreatePasswordViewController {
+                    destinationVC.user = user
+                }
+        }
     }
     
     

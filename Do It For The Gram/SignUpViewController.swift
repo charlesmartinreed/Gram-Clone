@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewController: UIViewController {
 
@@ -15,6 +16,15 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var phoneEmailTextField: UITextField!
     
     
+    //MARK:- Properties
+    var signupModeisActive = true
+    var user = PFUser()
+    
+    //phone
+    //email
+    //username
+    //password
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,8 +32,38 @@ class SignUpViewController: UIViewController {
     
     
     //MARK:- IBActions
-    @IBAction func signUpNextScreenButtonTapped(_ sender: UIButton) {
+    @IBAction func signUpNextScreenButtonTapped(_ sender: Any) {
+        //check for values in the text field
+        guard let textField = phoneEmailTextField.text else { return }
+        
+        switch phoneEmailSegControl.selectedSegmentIndex {
+        case 0:
+            //create a phone number associated with the user
+            if textField != "" {
+                user["phone"] = textField
+                print(user)
+                performSegue(withIdentifier: "toAddNameVC", sender: nil)
+            
+            } else {
+                //display alert here
+                print("could not add phone number")
+            }
+        case 1:
+            //create an email account associated with the user
+            if textField != "" {
+                user.email = textField
+                print(user)
+                
+                performSegue(withIdentifier: "toAddNameVC", sender: nil)
+            } else {
+                //display alert here
+                print("could not add email address")
+            }
+        default:
+            break
+        }
     }
+    
     @IBAction func phoneEmailSegControlValueChanged(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 0 {
@@ -36,13 +76,18 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func returnToSignInScreen(_ sender: UIButton) {
-        //self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
+        signupModeisActive = false
+        
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
 
     }
     
-    @IBAction func nextButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "toAddNameVC", sender: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toAddNameVC" {
+                if let destinationVC = segue.destination as? SignUpViewSecondViewController {
+                    destinationVC.user = user
+                }
+            }
     }
     
 
