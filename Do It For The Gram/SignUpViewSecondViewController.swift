@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class SignUpViewSecondViewController: UIViewController {
-
+    
     //MARK:- IBOutlets
     @IBOutlet weak var fullNameTextField: UITextField!
     
@@ -32,11 +32,9 @@ class SignUpViewSecondViewController: UIViewController {
         if fullName != "" {
             user?.username = fullName
             performSegue(withIdentifier: "toCreatePasswordVC", sender: nil)
-            
         } else {
             displayAlert(title: "Invalid username", message: "Please enter a valid username")
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

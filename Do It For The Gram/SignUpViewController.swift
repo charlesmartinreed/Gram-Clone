@@ -10,11 +10,10 @@ import UIKit
 import Parse
 
 class SignUpViewController: UIViewController {
-
+    
     //MARK:- IBOutlets
     @IBOutlet weak var phoneEmailSegControl: UISegmentedControl!
     @IBOutlet weak var phoneEmailTextField: UITextField!
-    
     
     //MARK:- Properties
     var signupModeisActive = true
@@ -28,6 +27,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        phoneEmailSegControl.selectedSegmentIndex = 0
     }
     
     
@@ -36,28 +36,25 @@ class SignUpViewController: UIViewController {
         //check for values in the text field
         guard let textField = phoneEmailTextField.text else { return }
         
-        switch phoneEmailSegControl.selectedSegmentIndex {
-        case 0:
-            //create a phone number associated with the user
-            if textField != "" {
+        if phoneEmailSegControl.selectedSegmentIndex == 0 {
+            if textField == "" {
+                displayAlert(title: "Phone number is invalid", message: "Please enter a valid phone number")
+            } else {
                 user["phone"] = textField
                 performSegue(withIdentifier: "toAddNameVC", sender: nil)
-            
-            } else if textField == "" {
-                displayAlert(title: "Phone number is invalid", message: "Please enter a valid phone number")
             }
-        case 1:
-            //create an email account associated with the user
-            if textField != "" {
+            
+        }
+        
+        if phoneEmailSegControl.selectedSegmentIndex == 1 {
+            if textField == "" {
+                displayAlert(title: "Email address is invalid", message: "Please enter a valid email address")
+            } else {
                 user.email = textField
                 performSegue(withIdentifier: "toAddNameVC", sender: nil)
-                
-            } else if textField == "" {
-                displayAlert(title: "Email address is invalid", message: "Please enter a valid email address")
             }
-        default:
-            break
         }
+        
         
     }
     

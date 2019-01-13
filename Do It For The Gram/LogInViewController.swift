@@ -11,22 +11,26 @@ import Parse
 
 class LogInViewController: UIViewController {
     
+    func pauseAndDisplayActivityIndicator() {
+        
+    }
+    
     //MARK:- IBOutlets
     @IBOutlet weak var loginEmailTextField: UITextField!
     @IBOutlet weak var loginPasswordTextField: UITextField!
     
     //MARK:- Properties
     var userIsLoggedIn = false
-    var currentUser = PFUser.current()
+    //var currentUser = PFUser.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if currentUser == nil {
-            return
-        } else {
-            //sent them to the homescreen directly
-        }
+//        if currentUser == nil {
+//            return
+//        } else {
+//            //sent them to the homescreen directly
+//        }
     }
 
 
@@ -49,7 +53,7 @@ class LogInViewController: UIViewController {
                 if user != nil {
                     //present successful login screen
                     print("login was successful")
-                    self.currentUser = user
+                    //self.currentUser = user
                 } else {
                       self.displayAlert(title: "Unable to log in", message: error!.localizedDescription)
                 }

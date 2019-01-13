@@ -21,7 +21,7 @@ class NewUserWelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         if let newUser = user {
-            welcomeLabel.text = "Welcome to Instagram, \(newUser.username!)"
+            welcomeLabel.text = "Welcome to Instagram, \(newUser.username!)!"
         }
         
     }

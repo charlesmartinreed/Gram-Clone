@@ -222,7 +222,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpNextScreenButtonTapped:" destination="FlP-2J-Ua3" eventType="touchUpInside" id="HeK-c3-Nkm"/>
-                                    <segue destination="Mys-ny-y2p" kind="show" identifier="toAddNameVC" id="v3a-rC-7ov"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may receive SMS updates from Instagram and can opt out at any time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-Fj-VTz">
@@ -290,6 +289,7 @@
                     <connections>
                         <outlet property="phoneEmailSegControl" destination="9c1-yQ-vrU" id="Q44-Ea-LaA"/>
                         <outlet property="phoneEmailTextField" destination="JMo-62-Cyl" id="xdb-Cz-6xr"/>
+                        <segue destination="Mys-ny-y2p" kind="show" identifier="toAddNameVC" id="CMT-eH-oD1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHI-Z7-JNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,7 +352,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="Mys-ny-y2p" eventType="touchUpInside" id="wsM-1j-iWc"/>
-                                    <segue destination="Z7V-Pg-jwM" kind="show" identifier="toCreatePasswordVC" id="gMU-zi-SSR"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1j-Cp-BYH">
@@ -409,6 +408,7 @@
                     </view>
                     <connections>
                         <outlet property="fullNameTextField" destination="PG8-ho-PQL" id="vpL-JF-8yO"/>
+                        <segue destination="Z7V-Pg-jwM" kind="show" identifier="toCreatePasswordVC" id="FkB-Lk-EYz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjR-0F-vtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -451,7 +451,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="Z7V-Pg-jwM" eventType="touchUpInside" id="X1a-7d-ZQf"/>
-                                    <segue destination="bhN-C6-qFo" kind="show" identifier="toNewUserWelcomeVC" id="xBJ-PL-hr1"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2j-rg-rqD">
@@ -507,6 +506,7 @@
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="Z62-cC-4IJ" id="A5T-L6-OXx"/>
+                        <segue destination="bhN-C6-qFo" kind="show" identifier="toNewUserWelcomeVC" id="xUs-8M-1xd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vES-0K-KXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
