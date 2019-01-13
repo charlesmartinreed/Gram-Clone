@@ -34,8 +34,7 @@ class SignUpViewSecondViewController: UIViewController {
             performSegue(withIdentifier: "toCreatePasswordVC", sender: nil)
             
         } else {
-            //error handling, this will be an alert
-            print("Could not create username")
+            displayAlert(title: "Invalid username", message: "Please enter a valid username")
         }
         
     }

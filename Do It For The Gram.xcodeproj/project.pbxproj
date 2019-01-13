@@ -13,6 +13,7 @@
 		8C0C649D21E97270005F2E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0C649B21E97270005F2E2A /* Main.storyboard */; };
 		8C0C649F21E97271005F2E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C0C649E21E97271005F2E2A /* Assets.xcassets */; };
 		8C0C64A221E97271005F2E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0C64A021E97271005F2E2A /* LaunchScreen.storyboard */; };
+		8C55D1AC21EAC922001C3482 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C55D1AB21EAC922001C3482 /* UIViewController+Extension.swift */; };
 		8CC41E6C21E99AF800885BD1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E6B21E99AF800885BD1 /* PhotoViewController.swift */; };
 		8CC41E6E21E9A56600885BD1 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */; };
 		8CC41E7021E9ABCA00885BD1 /* Sail-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CC41E6F21E9ABCA00885BD1 /* Sail-Regular.otf */; };
@@ -30,6 +31,7 @@
 		8C0C649E21E97271005F2E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C0C64A121E97271005F2E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C0C64A321E97271005F2E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C55D1AB21EAC922001C3482 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8CC41E6B21E99AF800885BD1 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		8CC41E6F21E9ABCA00885BD1 /* Sail-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sail-Regular.otf"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				8C0C64A021E97271005F2E2A /* LaunchScreen.storyboard */,
 				8CC41E6F21E9ABCA00885BD1 /* Sail-Regular.otf */,
 				8C0C64A321E97271005F2E2A /* Info.plist */,
+				8C55D1AB21EAC922001C3482 /* UIViewController+Extension.swift */,
 			);
 			path = "Do It For The Gram";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C55D1AC21EAC922001C3482 /* UIViewController+Extension.swift in Sources */,
 				8C0C649A21E97270005F2E2A /* LogInViewController.swift in Sources */,
 				8C0C649821E97270005F2E2A /* AppDelegate.swift in Sources */,
 				8CC41E6C21E99AF800885BD1 /* PhotoViewController.swift in Sources */,

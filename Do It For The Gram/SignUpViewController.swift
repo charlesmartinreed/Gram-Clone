@@ -45,8 +45,7 @@ class SignUpViewController: UIViewController {
                 performSegue(withIdentifier: "toAddNameVC", sender: nil)
             
             } else {
-                //display alert here
-                print("could not add phone number")
+                displayAlert(title: "Phone number is invalid", message: "Please enter a valid phone number")
             }
         case 1:
             //create an email account associated with the user
@@ -56,8 +55,7 @@ class SignUpViewController: UIViewController {
                 
                 performSegue(withIdentifier: "toAddNameVC", sender: nil)
             } else {
-                //display alert here
-                print("could not add email address")
+                displayAlert(title: "Email address is invalid", message: "Please enter a valid email address")
             }
         default:
             break
@@ -89,16 +87,5 @@ class SignUpViewController: UIViewController {
                 }
             }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
