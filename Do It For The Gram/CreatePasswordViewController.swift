@@ -31,18 +31,27 @@ class CreatePasswordViewController: UIViewController {
         //assuming the password meets the requirements, pass the user to the success screen
         guard let password = passwordTextField.text else { return }
         
+        //MARK:- activity indicator, using extension method
+        let activityIndicator = pauseAndDisplayActivityIndicator()
+        
         if password != "" {
             user?.password = password
             user?.signUpInBackground { (success, error) in
                 if let error = error {
+                    activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
                     self.displayAlert(title: "Unable to complete sign-up", message: error.localizedDescription)
                 } else {
+                    activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "toNewUserWelcomeVC", sender: nil)
                     }
                 }
             }
         } else {
+            activityIndicator.stopAnimating()
+            UIApplication.shared.endIgnoringInteractionEvents()
             displayAlert(title: "Invalid password", message: "Please enter a valid password")
         }
         

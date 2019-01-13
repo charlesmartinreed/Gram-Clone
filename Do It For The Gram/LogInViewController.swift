@@ -11,9 +11,17 @@ import Parse
 
 class LogInViewController: UIViewController {
     
-    func pauseAndDisplayActivityIndicator() {
-        
-    }
+//    func pauseAndDisplayActivityIndicator() -> UIActivityIndicatorView {
+//        let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: view.center.x - 25, y: view.center.y + 100, width: 50, height: 50))
+//        activityIndicator.hidesWhenStopped = true
+//        activityIndicator.style = .gray
+//        
+//        view.addSubview(activityIndicator)
+//        activityIndicator.startAnimating()
+//        UIApplication.shared.beginIgnoringInteractionEvents()
+//        
+//        return activityIndicator
+//    }
     
     //MARK:- IBOutlets
     @IBOutlet weak var loginEmailTextField: UITextField!
@@ -49,12 +57,20 @@ class LogInViewController: UIViewController {
             self.displayAlert(title: "Please enter username and password", message: "Username and password fields cannot be blank.")
         } else {
             //try to log the user in
+            //MARK:- Create activity indicator, using extension method
+            let activityIndicator = pauseAndDisplayActivityIndicator()
+            
             PFUser.logInWithUsername(inBackground: userLogin, password: userPassword) { (user, error) in
                 if user != nil {
                     //present successful login screen
                     print("login was successful")
+                    activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
+                    
                     //self.currentUser = user
                 } else {
+                    activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
                       self.displayAlert(title: "Unable to log in", message: error!.localizedDescription)
                 }
             }

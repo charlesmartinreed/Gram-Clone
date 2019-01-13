@@ -18,6 +18,18 @@ extension UIViewController {
 
         present(alert, animated: true, completion: nil)
     }
+    
+    func pauseAndDisplayActivityIndicator() -> UIActivityIndicatorView {
+        let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: view.center.x - 25, y: view.center.y + 100, width: 50, height: 50))
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .gray
+        
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        return activityIndicator
+    }
 }
 
 
