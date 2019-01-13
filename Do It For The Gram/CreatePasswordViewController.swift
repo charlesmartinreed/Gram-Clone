@@ -35,18 +35,15 @@ class CreatePasswordViewController: UIViewController {
             user?.password = password
             user?.signUpInBackground { (success, error) in
                 if let error = error {
-                    //display an alert
-                    print(error.localizedDescription)
+                    self.displayAlert(title: "Unable to complete sign-up", message: error.localizedDescription)
                 } else {
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "toNewUserWelcomeVC", sender: nil)
-                        print("successful creation of new user!")
                     }
                 }
             }
         } else {
-            //display an alert
-            print("could not create password")
+            displayAlert(title: "Invalid password", message: "Please enter a valid password")
         }
         
     }

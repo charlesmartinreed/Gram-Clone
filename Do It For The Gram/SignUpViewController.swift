@@ -41,25 +41,24 @@ class SignUpViewController: UIViewController {
             //create a phone number associated with the user
             if textField != "" {
                 user["phone"] = textField
-                print(user)
                 performSegue(withIdentifier: "toAddNameVC", sender: nil)
             
-            } else {
+            } else if textField == "" {
                 displayAlert(title: "Phone number is invalid", message: "Please enter a valid phone number")
             }
         case 1:
             //create an email account associated with the user
             if textField != "" {
                 user.email = textField
-                print(user)
-                
                 performSegue(withIdentifier: "toAddNameVC", sender: nil)
-            } else {
+                
+            } else if textField == "" {
                 displayAlert(title: "Email address is invalid", message: "Please enter a valid email address")
             }
         default:
             break
         }
+        
     }
     
     @IBAction func phoneEmailSegControlValueChanged(_ sender: UISegmentedControl) {

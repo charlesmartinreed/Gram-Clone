@@ -44,7 +44,6 @@ class PhotoViewController: UIViewController {
         view.addSubview(photoImageView)
         
         setupAutoLayoutConstraints()
-        
     }
     
     private func setupAutoLayoutConstraints() {
