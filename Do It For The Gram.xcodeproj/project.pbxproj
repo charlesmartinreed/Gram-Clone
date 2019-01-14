@@ -21,6 +21,7 @@
 		8CC41E7421E9D22400885BD1 /* SignUpViewSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E7321E9D22400885BD1 /* SignUpViewSecondViewController.swift */; };
 		8CC41E7621E9D8D600885BD1 /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E7521E9D8D600885BD1 /* CreatePasswordViewController.swift */; };
 		8CC41E7821E9D9D800885BD1 /* NewUserWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC41E7721E9D9D800885BD1 /* NewUserWelcomeViewController.swift */; };
+		8CD7A1AE21EC102500C335AE /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD7A1AD21EC102500C335AE /* UserTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		8CC41E7321E9D22400885BD1 /* SignUpViewSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewSecondViewController.swift; sourceTree = "<group>"; };
 		8CC41E7521E9D8D600885BD1 /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		8CC41E7721E9D9D800885BD1 /* NewUserWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserWelcomeViewController.swift; sourceTree = "<group>"; };
+		8CD7A1AD21EC102500C335AE /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		998CADD35ED7FA174907109E /* Pods-Do It For The Gram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Do It For The Gram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram.release.xcconfig"; sourceTree = "<group>"; };
 		CF2C358A39F57E64B9D5686C /* Pods_Do_It_For_The_Gram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Do_It_For_The_Gram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC3CF9E0BF819A72CB52FAE /* Pods-Do It For The Gram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Do It For The Gram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Do It For The Gram/Pods-Do It For The Gram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				8CC41E7321E9D22400885BD1 /* SignUpViewSecondViewController.swift */,
 				8CC41E7521E9D8D600885BD1 /* CreatePasswordViewController.swift */,
 				8CC41E7721E9D9D800885BD1 /* NewUserWelcomeViewController.swift */,
+				8CD7A1AD21EC102500C335AE /* UserTableViewController.swift */,
 				8CC41E6B21E99AF800885BD1 /* PhotoViewController.swift */,
 				8CC41E6D21E9A56600885BD1 /* AlertsViewController.swift */,
 				8C0C649B21E97270005F2E2A /* Main.storyboard */,
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD7A1AE21EC102500C335AE /* UserTableViewController.swift in Sources */,
 				8C55D1AC21EAC922001C3482 /* UIViewController+Extension.swift in Sources */,
 				8C0C649A21E97270005F2E2A /* LogInViewController.swift in Sources */,
 				8C0C649821E97270005F2E2A /* AppDelegate.swift in Sources */,

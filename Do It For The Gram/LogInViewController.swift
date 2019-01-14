@@ -29,7 +29,7 @@ class LogInViewController: UIViewController {
     
     //MARK:- Properties
     var userIsLoggedIn = false
-    //var currentUser = PFUser.current()
+    var currentUser = PFUser.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,17 @@ class LogInViewController: UIViewController {
 //        } else {
 //            //sent them to the homescreen directly
 //        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //segues can't be performed until the view actually appears, of course
+        //if user is logged in
+        if PFUser.current() != nil {
+            performSegue(withIdentifier: "toUserTableVC", sender: self)
+        }
+        
+        //prevent the nav bar from showing when we segue back to this VC
+        self.navigationController?.navigationBar.isHidden = true
     }
 
 
@@ -62,12 +73,10 @@ class LogInViewController: UIViewController {
             
             PFUser.logInWithUsername(inBackground: userLogin, password: userPassword) { (user, error) in
                 if user != nil {
-                    //present successful login screen
-                    print("login was successful")
+                    //segue to user table vc
                     activityIndicator.stopAnimating()
                     UIApplication.shared.endIgnoringInteractionEvents()
-                    
-                    //self.currentUser = user
+                    self.performSegue(withIdentifier: "toUserTableVC", sender: self)
                 } else {
                     activityIndicator.stopAnimating()
                     UIApplication.shared.endIgnoringInteractionEvents()

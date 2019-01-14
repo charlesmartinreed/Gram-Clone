@@ -180,6 +180,7 @@
                     <connections>
                         <outlet property="loginEmailTextField" destination="hcV-xZ-k0T" id="McU-66-PuO"/>
                         <outlet property="loginPasswordTextField" destination="1i1-Tb-oyp" id="SwX-2t-oRh"/>
+                        <segue destination="6bj-T3-ZHy" kind="show" identifier="toUserTableVC" id="sM0-zr-jeS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -296,6 +297,60 @@
             </objects>
             <point key="canvasLocation" x="-340" y="-601"/>
         </scene>
+        <!--Users-->
+        <scene sceneID="Yr7-hw-VsQ">
+            <objects>
+                <tableViewController id="mKc-9e-gkW" customClass="UserTableViewController" customModule="Do_It_For_The_Gram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wPd-PJ-y28">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" id="N3T-xx-nsP">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N3T-xx-nsP" id="hjf-Fm-vfP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mKc-9e-gkW" id="wjq-8P-Ugr"/>
+                            <outlet property="delegate" destination="mKc-9e-gkW" id="KXg-bw-Je3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Users" id="LTR-6o-PxD">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Yep-aU-i0I">
+                            <connections>
+                                <action selector="logoutUser:" destination="mKc-9e-gkW" id="oDO-Am-234"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="Quu-dw-tVf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4d-CG-fqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7fF-Hd-RqN">
+            <objects>
+                <navigationController id="6bj-T3-ZHy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y4o-xg-6G4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mKc-9e-gkW" kind="relationship" relationship="rootViewController" id="2sJ-tg-ZBO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pip-bG-av5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1130" y="161"/>
+        </scene>
         <!--Photo View Controller-->
         <scene sceneID="Q7c-xM-plG">
             <objects>
@@ -309,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BA2-wc-Cfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-540" y="441"/>
+            <point key="canvasLocation" x="-503" y="917"/>
         </scene>
         <!--Sign Up View Second View Controller-->
         <scene sceneID="sEc-NX-ik1">
@@ -521,7 +576,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3SG-KB-Ppw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="3SG-KB-Ppw">
                                 <rect key="frame" x="69" y="50" width="237.5" height="57.5"/>
                                 <string key="text">Welcome to Instagram,
 username!</string>
@@ -591,6 +646,7 @@ username!</string>
                     </view>
                     <connections>
                         <outlet property="welcomeLabel" destination="3SG-KB-Ppw" id="9bk-9g-9lU"/>
+                        <segue destination="6bj-T3-ZHy" kind="show" identifier="toUserTableVC" id="aQD-3b-rc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hZ-aN-3l3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -628,7 +684,10 @@ username!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqi-KF-nhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="440"/>
+            <point key="canvasLocation" x="574" y="976"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aQD-3b-rc9"/>
+    </inferredMetricsTieBreakers>
 </document>

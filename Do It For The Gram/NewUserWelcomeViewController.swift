@@ -26,11 +26,20 @@ class NewUserWelcomeViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toUserTableVC" {
+            if let destinationVC = segue.destination as? UserTableViewController {
+                if let user = user {
+                    destinationVC.currentUser = user
+                }
+            }
+        }
+    }
 
     //MARK:- IBActions
     @IBAction func nextButtonTapped(_ sender: Any) {
         //sign up is complete, send user to home screen
-        performSegue(withIdentifier: "toHomeScreen", sender: user)
+        performSegue(withIdentifier: "toUserTableVC", sender: user)
     }
     
     @IBAction func changeUsernameButtonTapped(_ sender: UIButton) {
